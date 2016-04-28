@@ -1,0 +1,98 @@
+body{
+  background: url(../img/bg.jpg) no-repeat top left;
+  background-size: cover;
+}
+#wrapper{
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background-size: cover;
+}
+@keyframes mousemove {
+    from {background-color: rgba(255,255,255,0);}
+    to {background-color: rgba(255,255,255,0.8);}
+}
+#wrapper.bg-hidden{
+  background-color: rgba(255,255,255,0);
+}
+#wrapper.bg-visible{
+  background-color: rgba(255,255,255,0.8);
+  animation-name: mousemove;
+  animation-duration: 1s;
+}
+.navbar.navbar-default, 
+div#footer{
+  background-color: #d3d3d3;
+  border-color:#acacac;
+  border-radius: 0;
+  color:#333;
+}
+.navbar.navbar-default .navbar-brand,
+.navbar .nav,
+.navbar.navbar-default .navbar-nav > li > a{
+  font-size: 23px;
+  color:#333;
+}
+.add-form input,
+.add-form button,
+.add-comment input,
+.add-comment button{
+  font-size: 22px;
+}
+.add-form input,
+.add-comment input{
+  height: 40px;
+}
+.suggestion-wrapper{
+  padding: 5px 5px 5px 20px;
+  border-radius: 4px;
+}
+.suggestion-wrapper.even{
+  background-color: rgba(246, 246, 246, 0.5);
+
+}
+.suggestion{
+  color: #333;
+  font-size: 22px;
+}
+.vote-counter{
+  font-size: 20px;
+  color:#939393;
+}
+.vote-btn{
+  font-size: 20px;
+  color:#7fff7f;
+}
+.vote-btn:hover{
+  cursor: pointer;
+  color:#009900;
+}
+.vote-btn[disabled='disabled']{
+  color:#939393;
+}
+.vote-btn:hover[disabled='disabled']{
+  cursor: text;
+}
+.comments{
+  font-size: 20px;
+  margin-left: 26px;
+}
+.comment{
+  font-size: 18px;
+}
+#footer{
+  height: 60px;
+  background-color: #f8f8f8;
+  border:1px solid #e7e7e7;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+}
+#footer .container{
+  align-self: center;
+}
+#footer p{
+  float: right;
+}

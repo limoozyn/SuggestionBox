@@ -1,0 +1,18 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-sm-6'>
+      <p class='suggestion'>{{post.title}}</p>
+      <form class='add-comment'ng-submit="addComment()">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Leave your comment here" ng-model="body"></input>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Comment</button>
+      </form>
+      <div ng-repeat='comment in post.comments | orderBy:"-upvotes"'>
+        <p class='comment'>{{comment.body}}</p>
+        <span class="glyphicon glyphicon-plus-sign vote-btn" ng-disabled="isDisabled" ng-click="upVoteComment(comment)"></span> 
+        <span class='vote-counter'>Upvotes: {{comment.upvotes}}</span>
+      </div>
+    </div>
+  </div>
+</div>
