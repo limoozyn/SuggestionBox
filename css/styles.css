@@ -28,6 +28,7 @@ a.navbar-brand img{
   width: auto;
   display: inline-block;
   margin-right: 15px;
+  padding-left: 20px;
 }
 a.navbar-brand{
   display: inline-block;
