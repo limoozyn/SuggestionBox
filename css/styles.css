@@ -1,26 +1,14 @@
-body{
-  background: url(../img/bg.jpg) no-repeat top left;
+body.custom{
+  background-color: #f1f1f1;
   background-size: cover;
 }
 #wrapper{
-    position:fixed;
+    position:relative;
     top:0px;
     bottom:0px;
     left:0px;
     right:0px;
     background-size: cover;
-}
-@keyframes mousemove {
-    from {background-color: rgba(255,255,255,0);}
-    to {background-color: rgba(255,255,255,0.8);}
-}
-#wrapper.bg-hidden{
-  background-color: rgba(255,255,255,0);
-}
-#wrapper.bg-visible{
-  background-color: rgba(255,255,255,0.8);
-  animation-name: mousemove;
-  animation-duration: 1s;
 }
 .navbar.navbar-default, 
 div#footer{
@@ -34,6 +22,16 @@ div#footer{
 .navbar.navbar-default .navbar-nav > li > a{
   font-size: 23px;
   color:#333;
+}
+a.navbar-brand img{
+  height: 100%;
+  width: auto;
+  display: inline-block;
+  margin-right: 15px;
+}
+a.navbar-brand{
+  display: inline-block;
+  padding: 0 15px;
 }
 .add-form input,
 .add-form button,

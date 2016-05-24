@@ -1,14 +1,6 @@
 <div class='container'>
   <div class='row'>
     <div class='col-sm-6'>
-      <form class='submit-form add-form' ng-submit="addSuggestion()">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Submit your suggestion here" ng-model="title"></input>
-        </div>
-        <button type="submit" class="btn btn-primary">Add</button>
-      </form>
-    </div>
-    <div class='col-sm-6'>
 
           <div ng-repeat='post in posts | orderBy:"-upvotes"' ng-class-odd="'odd'" ng-class-even="'even'" class='suggestion-wrapper'>
             <p class='suggestion'>{{post.title}}</p>
@@ -16,7 +8,14 @@
             <span class='vote-counter'>Upvotes: {{post.upvotes}}</span>
             <a href="#/suggestion/{{$index}}" class='comments'>Comments</a>
           </div>
-
+    </div>
+    <div class='col-sm-6'>
+      <form class='submit-form add-form' ng-submit="addSuggestion()">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Submit your suggestion here" ng-model="title"></input>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
     </div>
   </div>
 </div>
